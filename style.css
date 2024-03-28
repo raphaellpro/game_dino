@@ -1,0 +1,52 @@
+
+.dino {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background-image: url(./img/dino.png);
+  bottom: 0px;
+}
+
+.obstacle {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background-image: url(./img/cactus.png);
+  bottom: 0px;
+}
+
+#desert {
+  position: absolute;
+  bottom: 0px;
+  background-image: url('./img/bg.png');
+  /* Chão se movendo, "repetindo"*/
+  background-repeat: repeat-x;
+  /* Velocidade com que o chão se move */
+  animation: slideright 600s infinite linear;
+  /* O mesmo com renderização para chrome e safari */
+  -webkit-animation: slideright 600s infinite linear;
+  /* Largura do chão */
+  width: 400%;
+  /* Altura do chão */
+  height: 200px;
+}
+
+/* slider de movimento do chão */
+@keyframes slideright {
+  from {
+      background-position: 70000%;
+  }
+  to {
+      background-position: 0%;
+  }
+}
+
+/* renderização para chrome e safari */
+@-webkit-keyframes slideright {
+  from {
+      background-position: 70000%;
+  }
+  to {
+      background-position: 0%;
+  }
+}
